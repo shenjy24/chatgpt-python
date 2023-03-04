@@ -1,5 +1,5 @@
 import openai
-import tiktoken
+# import tiktoken
 
 
 def print_hi(name):
@@ -16,7 +16,7 @@ def num_tokens_from_string(string: str, encoding_name: str) -> int:
 
 def chatgpt(content):
     """调用OpenAi的聊天接口"""
-    openai.api_key = ""
+    openai.api_key = "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"
     completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": content}])
     message = completion.choices[0].message.content
     print(message)
@@ -24,5 +24,5 @@ def chatgpt(content):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print(num_tokens_from_string("tiktoken is great!", "gpt2"))
+    # print(num_tokens_from_string("tiktoken is great!", "gpt2"))
     print(chatgpt("pip常用指令"))
